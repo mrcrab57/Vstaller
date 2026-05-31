@@ -4,4 +4,4 @@ Also is my school year project
 
 The app is really easy to use just open it choose what things you want to install and hit the button on the bottom right.
 
-THE .EXE FILE OF THE MAIN VIEW DONT WORK USE THE RELEASES TAB TO DOQMLOAD THE CORECT .EXE FILE
+THE .EXE FILE OF THE MAIN BRANCH DONT WORK USE THE RELEASES TAB TO DOQMLOAD THE CORECT .EXE FILE

@@ -5416,7 +5416,7 @@
   <data name="pictureBox12.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAA2lJREFUSEvtlWdMU1EYhv0pKhKIGkc0MQ4SMcYVE4whmqg/3IlR44pslKUigTBU
+        vAAADrwBlbxySQAAA2lJREFUSEvtlWdMU1EYhv0pKhKIGkc0MQ4SMcYVE4whmqg/3IlR44pslKUigTBU
         UCIGEAdCQGSr0AIlhWqptdCW3bKVoaWMggyhIlAKHYBvcuEWLoVqov9onpBzv3vu95zxncOixdZp/5UF
         gUEWBAb5C4GJPd3qAdc5QRTKqo8XSJMLmkEMT+JHrz4RyjdzTKf0JzAsWO2ciaS5NZ0iaV+SsNmXVn01
         qvh4aP7hYB7+WkeXPGJ+ETT0DCjViQKpuWc25fP5BFvvZEd+/Jpa3HotunitK4PylsJmD2aCQDo0or4Q
@@ -5720,7 +5720,7 @@
   <data name="pictureBox22.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAAsFJREFUWEftlk9o01Acx3tQPPgPvHjwoiIKO+hhTaJNyhQ9KHrYDpsgehL8B1ME
+        vAAADrwBlbxySQAAAsFJREFUWEftlk9o01Acx3tQPPgPvHjwoiIKO+hhTaJNyhQ9KHrYDpsgehL8B1ME
         UaZJqzIQdlBG1YPINp3bSYZMVw8Tp2vT7uBBnWy76FE2xSVhtGkdNX6zPWVNfu0MPA+DfeHDa9b8ft/v
         63t5WWhZS061p5yVgmbsF2LmFVE12iXNuCuoxg0xZjbWXDQ3sNv+jyTNPCdqxpQUMx0KfFcQNet+TdxZ
         w0r4Cc0vg1nMNoHxLRVgAa9ZGT+JmvkRPHc/Sy2TGwnTMnZdzW2aK+QlzHocfBe16cMYWynTMuLGZlbK
@@ -5738,7 +5738,7 @@
   <data name="pictureBox23.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAABMxJREFUWEe9V1tPXFUYpXhLNIJKECH6JOkv8MXEONVEfdG3NqGa6FP7YqJtjMZI
+        vAAADrwBlbxySQAABMxJREFUWEe9V1tPXFUYpXhLNIJKECH6JOkv8MXEONVEfdG3NqGa6FP7YqJtjMZI
         bCqCtLGJ4ZKGFoMtaKRFaMegVNrhYgOUcikMlJkzF+bM/cyd4RYIpsu9zszgCGcKw2i/ZOXMnL33Wuvs
         /X37nJ2XIfIFHi0tLX28pKTkiVxADnIlOXeMfRxUXFz8nF6vf9tms9X4fL7v/X7/hb2AY8lBLnKSmxoJ
         qe2RX1hY+HR7e/tb8Xh8cmNjA/8lyElualArIZkWouEpg8FweG1tbWV9fR3/B8hNDWolZTfjserq6pdW
@@ -5765,7 +5765,7 @@
   <data name="pictureBox25.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAB1pJREFUWEetl3tQVOcZh7+zLDadadRpm8sai0majJdoYixttWlK0kxn0kn+yXSm
+        vAAADrwBlbxySQAAB1pJREFUWEetl3tQVOcZh7+zLDadadRpm8sai0majJdoYixttWlK0kxn0kn+yXSm
         nUlnkrRJTI0SgQUvRI0QtRiMFIMQJDEohmAEEeR+URCQRSQgISD3217YGwu7y96A/fX9zgFUQgib9p15
         Zi9z9jy/9z3nfOcs+56SEa8SrxP+/Auqx4kIYpX4ibG7iM3Ey4TAv6DaRIQRAeKnH1BLiL8QiQErHsQv
         H3kU9D6VeI0wP/vcn/hnHcHDfbFy9Roolj3gpfdxxFt+crnr6aBn+TatxCtEEDEd7nvrUUIj3LcCwkOP
@@ -5824,7 +5824,7 @@
   <data name="pictureBox26.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAAadJREFUWEdjCNS+8n8A8d9RB4w6YNQBow4YdQBeBwTpXPkfqn/1f7AuqjiIH6J3
+        vAAADrwBlbxySQAAAadJREFUWEdjCNS+8n8A8d9RB4w6YNQBow4YdQBeBwTpXPkfqn/1f7AuqjiIH6J3
         Fc4GqYHhEKh6ZDEYDtaF6EHC+B2Q6XHrPwhcOfUF7BiY+KaFb/5fOvEFzF4y4SVYDQy8ffnr/4Lu51Ae
         Ktgw/w3cDCgmzgG/fv77P6XmCVwc3QGvn//6n+19C4wz3G/9j7W8DmbXJd0H6+8qfATmx9vcgJsBxcQ5
         YPOiN/8/ffjzP94WYgC6A148/omiD4ZBjgGBsoi7WOWBmDgH5Pvf/n/t7Nf/Bza9B4ujO+Dzxz//l09+
@@ -5837,7 +5837,7 @@
   <data name="pictureBox27.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAAadJREFUWEdjCNS+8n8A8d9RB4w6YNQBow4YdQBeBwTpXPkfqn/1f7AuqjiIH6J3
+        vAAADrwBlbxySQAAAadJREFUWEdjCNS+8n8A8d9RB4w6YNQBow4YdQBeBwTpXPkfqn/1f7AuqjiIH6J3
         Fc4GqYHhEKh6ZDEYDtaF6EHC+B2Q6XHrPwhcOfUF7BiY+KaFb/5fOvEFzF4y4SVYDQy8ffnr/4Lu51Ae
         Ktgw/w3cDCgmzgG/fv77P6XmCVwc3QGvn//6n+19C4wz3G/9j7W8DmbXJd0H6+8qfATmx9vcgJsBxcQ5
         YPOiN/8/ffjzP94WYgC6A148/omiD4ZBjgGBsoi7WOWBmDgH5Pvf/n/t7Nf/Bza9B4ujO+Dzxz//l09+
@@ -5850,7 +5850,7 @@
   <data name="pictureBox28.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAANIAAADSCAYAAAA/mZ5CAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAdrxJREFUeF7tnQV4VVf2twMNNAQtUKBABSmuQUPc3UMSIBDcHYq7eyBKEtzdtbgk
+        vAAADrwBlbxySQAAdrxJREFUeF7tnQV4VVf2twMNNAQtUKBABSmuQUPc3UMSIBDcHYq7eyBKEtzdtbgk
         JECLFeouM53ptPOf2kwL3/7W79y7kn3P3TcCdArM3c/zPieee87Z715rr7PPuTbWZm3WZm3WZm3WZm3W
         Zm3WZm3WZm3WZm3WZm3WZm3WZm3WZm3WZm3WZm3WZm3WZm3WZm3WZm3WZm3WZm3WZm3WZmNTygKlrTyz
         6M81Gm+trRhNfwBxUJ+TtjK2Vp5Z9Oea4T4h9xFrk5p8YFgaHNAyEmV1PG/lmUV/rgH6AEuGPqIXCvxP
@@ -6363,7 +6363,7 @@
   <data name="pictureBox29.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAANIAAADSCAYAAAA/mZ5CAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAALgFJREFUeF7tnQd4FWX2xkMkEAKEBEIIgYQE0nvvPRIRFGmCdKSX0EK3UURFQcXC
+        vAAADrwBlbxySQAALgFJREFUeF7tnQd4FWX2xkMkEAKEBEIIgYQE0nvvPRIRFGmCdKSX0EK3UURFQcXC
         2gEVKYKiFAEVBRUB6QgIpAIJScB13dV11//ic/7nnZkvmdzcBMR/2Q3nfZ73uZRk7tzJ/OY93/m+mdiI
         RCKRSCQSiUQikUgkEolEIpFIJBKJRCKRSCQSiUQikUgkEolEIpFIJBKJRCKRSCQSiUQikUgkEolEIpFI
         JBKJRCKRSCQSiUQikUgkEolEIpFIJBKJRCKRSCQSiUQikUgkEolEIpFIJBKJRCKRSCQSiUQikUgkEolE
@@ -6561,5 +6561,11 @@
         RCKRSCQSiUQikUgkEolEIpFIJBKJRCKRSCQSiUQikUgkEolEIpFIJBKJRCKRSCQSiUQikUgkEolEIpFI
         JBKJRCKRSCQSiUQikUgkEolEIpFIJBKJRPXLxua/AbuRRW4q2qNPAAAAAElFTkSuQmCC
 </value>
+  </data>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>1. Select the software you want to install from the categories.
+2. Double-check your choices.
+3. "Install" button  will install everything that you have chose.
+4. "Update All" Button will update EVERYSYSTEM that suport winget on you'rs device.</value>
   </data>
 </root>

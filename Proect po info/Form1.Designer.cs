@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             button1 = new Button();
-            CheckBoxChrome = new CheckBox();
+            checkBoxChrome = new CheckBox();
             checkBoxBrave = new CheckBox();
             checkBoxOperaGX = new CheckBox();
             label2 = new Label();
@@ -71,7 +71,7 @@
             pictureBox12 = new PictureBox();
             checkBoxLogitech = new CheckBox();
             pictureBox13 = new PictureBox();
-            checkBoxNVIDIA = new CheckBox();
+            checkBoxNvidia = new CheckBox();
             checkBoxAMD = new CheckBox();
             pictureBox14 = new PictureBox();
             pictureBox15 = new PictureBox();
@@ -85,9 +85,9 @@
             label8 = new Label();
             checkBoxGit = new CheckBox();
             pictureBox16 = new PictureBox();
-            checkBoxVisualStudioCode = new CheckBox();
+            checkBoxVSCode = new CheckBox();
             pictureBox20 = new PictureBox();
-            checkBoxVisualStudio = new CheckBox();
+            checkBoxVS = new CheckBox();
             checkBoxPython = new CheckBox();
             pictureBox21 = new PictureBox();
             pictureBox22 = new PictureBox();
@@ -98,20 +98,19 @@
             checkBoxGitHub = new CheckBox();
             pictureBox24 = new PictureBox();
             label9 = new Label();
-            checkBoxNET10Desktop = new CheckBox();
+            checkBoxNetDesktop = new CheckBox();
             pictureBox26 = new PictureBox();
-            checkBoxNET10ASPNET = new CheckBox();
+            checkBoxNetAsp = new CheckBox();
             pictureBox27 = new PictureBox();
             label10 = new Label();
-            checkBoxTranslucentTB = new CheckBox();
+            checkBoxTranslucent = new CheckBox();
             checkBoxTaskbarX = new CheckBox();
             pictureBox28 = new PictureBox();
             pictureBox29 = new PictureBox();
             label11 = new Label();
-            label12 = new Label();
-            label13 = new Label();
-            label14 = new Label();
-            label15 = new Label();
+            buttonUpdateAll = new Button();
+            buttonSendRequest = new Button();
+            richTextBox1 = new RichTextBox();
             ((System.ComponentModel.ISupportInitialize)Chromepicture).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Bravepicture).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Operapicture).BeginInit();
@@ -151,7 +150,7 @@
             // 
             button1.BackColor = Color.CornflowerBlue;
             button1.FlatStyle = FlatStyle.Popup;
-            button1.Location = new Point(652, 489);
+            button1.Location = new Point(592, 443);
             button1.Name = "button1";
             button1.Size = new Size(95, 27);
             button1.TabIndex = 0;
@@ -159,20 +158,19 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // CheckBoxChrome
+            // checkBoxChrome
             // 
-            CheckBoxChrome.AutoSize = true;
-            CheckBoxChrome.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            CheckBoxChrome.ForeColor = SystemColors.Control;
-            CheckBoxChrome.Location = new Point(42, 141);
-            CheckBoxChrome.Name = "CheckBoxChrome";
-            CheckBoxChrome.Size = new Size(79, 26);
-            CheckBoxChrome.TabIndex = 2;
-            CheckBoxChrome.Text = "Chrome";
-            CheckBoxChrome.TextAlign = ContentAlignment.MiddleRight;
-            CheckBoxChrome.UseCompatibleTextRendering = true;
-            CheckBoxChrome.UseVisualStyleBackColor = true;
-            CheckBoxChrome.CheckedChanged += CheckBoxChrome_CheckedChanged;
+            checkBoxChrome.AutoSize = true;
+            checkBoxChrome.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            checkBoxChrome.ForeColor = SystemColors.Control;
+            checkBoxChrome.Location = new Point(42, 141);
+            checkBoxChrome.Name = "checkBoxChrome";
+            checkBoxChrome.Size = new Size(79, 26);
+            checkBoxChrome.TabIndex = 2;
+            checkBoxChrome.Text = "Chrome";
+            checkBoxChrome.TextAlign = ContentAlignment.MiddleRight;
+            checkBoxChrome.UseCompatibleTextRendering = true;
+            checkBoxChrome.UseVisualStyleBackColor = true;
             // 
             // checkBoxBrave
             // 
@@ -640,17 +638,17 @@
             pictureBox13.TabIndex = 41;
             pictureBox13.TabStop = false;
             // 
-            // checkBoxNVIDIA
+            // checkBoxNvidia
             // 
-            checkBoxNVIDIA.AutoSize = true;
-            checkBoxNVIDIA.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkBoxNVIDIA.ForeColor = SystemColors.Control;
-            checkBoxNVIDIA.Location = new Point(224, 319);
-            checkBoxNVIDIA.Name = "checkBoxNVIDIA";
-            checkBoxNVIDIA.Size = new Size(138, 24);
-            checkBoxNVIDIA.TabIndex = 39;
-            checkBoxNVIDIA.Text = "NVIDIA software";
-            checkBoxNVIDIA.UseVisualStyleBackColor = true;
+            checkBoxNvidia.AutoSize = true;
+            checkBoxNvidia.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            checkBoxNvidia.ForeColor = SystemColors.Control;
+            checkBoxNvidia.Location = new Point(224, 319);
+            checkBoxNvidia.Name = "checkBoxNvidia";
+            checkBoxNvidia.Size = new Size(138, 24);
+            checkBoxNvidia.TabIndex = 39;
+            checkBoxNvidia.Text = "NVIDIA software";
+            checkBoxNvidia.UseVisualStyleBackColor = true;
             // 
             // checkBoxAMD
             // 
@@ -801,17 +799,17 @@
             pictureBox16.TabIndex = 63;
             pictureBox16.TabStop = false;
             // 
-            // checkBoxVisualStudioCode
+            // checkBoxVSCode
             // 
-            checkBoxVisualStudioCode.AutoSize = true;
-            checkBoxVisualStudioCode.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkBoxVisualStudioCode.ForeColor = SystemColors.Control;
-            checkBoxVisualStudioCode.Location = new Point(422, 138);
-            checkBoxVisualStudioCode.Name = "checkBoxVisualStudioCode";
-            checkBoxVisualStudioCode.Size = new Size(153, 24);
-            checkBoxVisualStudioCode.TabIndex = 56;
-            checkBoxVisualStudioCode.Text = "Visual Studio Code";
-            checkBoxVisualStudioCode.UseVisualStyleBackColor = true;
+            checkBoxVSCode.AutoSize = true;
+            checkBoxVSCode.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            checkBoxVSCode.ForeColor = SystemColors.Control;
+            checkBoxVSCode.Location = new Point(422, 138);
+            checkBoxVSCode.Name = "checkBoxVSCode";
+            checkBoxVSCode.Size = new Size(153, 24);
+            checkBoxVSCode.TabIndex = 56;
+            checkBoxVSCode.Text = "Visual Studio Code";
+            checkBoxVSCode.UseVisualStyleBackColor = true;
             // 
             // pictureBox20
             // 
@@ -824,17 +822,17 @@
             pictureBox20.TabIndex = 59;
             pictureBox20.TabStop = false;
             // 
-            // checkBoxVisualStudio
+            // checkBoxVS
             // 
-            checkBoxVisualStudio.AutoSize = true;
-            checkBoxVisualStudio.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkBoxVisualStudio.ForeColor = SystemColors.Control;
-            checkBoxVisualStudio.Location = new Point(422, 169);
-            checkBoxVisualStudio.Name = "checkBoxVisualStudio";
-            checkBoxVisualStudio.Size = new Size(114, 24);
-            checkBoxVisualStudio.TabIndex = 57;
-            checkBoxVisualStudio.Text = "Visual Studio";
-            checkBoxVisualStudio.UseVisualStyleBackColor = true;
+            checkBoxVS.AutoSize = true;
+            checkBoxVS.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            checkBoxVS.ForeColor = SystemColors.Control;
+            checkBoxVS.Location = new Point(422, 169);
+            checkBoxVS.Name = "checkBoxVS";
+            checkBoxVS.Size = new Size(114, 24);
+            checkBoxVS.TabIndex = 57;
+            checkBoxVS.Text = "Visual Studio";
+            checkBoxVS.UseVisualStyleBackColor = true;
             // 
             // checkBoxPython
             // 
@@ -950,17 +948,17 @@
             label9.TabIndex = 70;
             label9.Text = ".NET";
             // 
-            // checkBoxNET10Desktop
+            // checkBoxNetDesktop
             // 
-            checkBoxNET10Desktop.AutoSize = true;
-            checkBoxNET10Desktop.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkBoxNET10Desktop.ForeColor = SystemColors.Control;
-            checkBoxNET10Desktop.Location = new Point(422, 384);
-            checkBoxNET10Desktop.Name = "checkBoxNET10Desktop";
-            checkBoxNET10Desktop.Size = new Size(148, 24);
-            checkBoxNET10Desktop.TabIndex = 71;
-            checkBoxNET10Desktop.Text = ".NET 10.0 Desktop";
-            checkBoxNET10Desktop.UseVisualStyleBackColor = true;
+            checkBoxNetDesktop.AutoSize = true;
+            checkBoxNetDesktop.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            checkBoxNetDesktop.ForeColor = SystemColors.Control;
+            checkBoxNetDesktop.Location = new Point(422, 384);
+            checkBoxNetDesktop.Name = "checkBoxNetDesktop";
+            checkBoxNetDesktop.Size = new Size(148, 24);
+            checkBoxNetDesktop.TabIndex = 71;
+            checkBoxNetDesktop.Text = ".NET 10.0 Desktop";
+            checkBoxNetDesktop.UseVisualStyleBackColor = true;
             // 
             // pictureBox26
             // 
@@ -973,17 +971,17 @@
             pictureBox26.TabIndex = 72;
             pictureBox26.TabStop = false;
             // 
-            // checkBoxNET10ASPNET
+            // checkBoxNetAsp
             // 
-            checkBoxNET10ASPNET.AutoSize = true;
-            checkBoxNET10ASPNET.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkBoxNET10ASPNET.ForeColor = SystemColors.Control;
-            checkBoxNET10ASPNET.Location = new Point(422, 415);
-            checkBoxNET10ASPNET.Name = "checkBoxNET10ASPNET";
-            checkBoxNET10ASPNET.Size = new Size(149, 24);
-            checkBoxNET10ASPNET.TabIndex = 73;
-            checkBoxNET10ASPNET.Text = ".NET 10.0 ASP.NET";
-            checkBoxNET10ASPNET.UseVisualStyleBackColor = true;
+            checkBoxNetAsp.AutoSize = true;
+            checkBoxNetAsp.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            checkBoxNetAsp.ForeColor = SystemColors.Control;
+            checkBoxNetAsp.Location = new Point(422, 415);
+            checkBoxNetAsp.Name = "checkBoxNetAsp";
+            checkBoxNetAsp.Size = new Size(149, 24);
+            checkBoxNetAsp.TabIndex = 73;
+            checkBoxNetAsp.Text = ".NET 10.0 ASP.NET";
+            checkBoxNetAsp.UseVisualStyleBackColor = true;
             // 
             // pictureBox27
             // 
@@ -1007,17 +1005,17 @@
             label10.TabIndex = 75;
             label10.Text = "Desktop Visual";
             // 
-            // checkBoxTranslucentTB
+            // checkBoxTranslucent
             // 
-            checkBoxTranslucentTB.AutoSize = true;
-            checkBoxTranslucentTB.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkBoxTranslucentTB.ForeColor = SystemColors.Control;
-            checkBoxTranslucentTB.Location = new Point(422, 477);
-            checkBoxTranslucentTB.Name = "checkBoxTranslucentTB";
-            checkBoxTranslucentTB.Size = new Size(119, 24);
-            checkBoxTranslucentTB.TabIndex = 76;
-            checkBoxTranslucentTB.Text = "TranslucentTB";
-            checkBoxTranslucentTB.UseVisualStyleBackColor = true;
+            checkBoxTranslucent.AutoSize = true;
+            checkBoxTranslucent.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            checkBoxTranslucent.ForeColor = SystemColors.Control;
+            checkBoxTranslucent.Location = new Point(422, 477);
+            checkBoxTranslucent.Name = "checkBoxTranslucent";
+            checkBoxTranslucent.Size = new Size(119, 24);
+            checkBoxTranslucent.TabIndex = 76;
+            checkBoxTranslucent.Text = "TranslucentTB";
+            checkBoxTranslucent.UseVisualStyleBackColor = true;
             // 
             // checkBoxTaskbarX
             // 
@@ -1064,53 +1062,42 @@
             label11.TabIndex = 80;
             label11.Text = "Instructions";
             // 
-            // label12
+            // buttonUpdateAll
             // 
-            label12.AllowDrop = true;
-            label12.FlatStyle = FlatStyle.Popup;
-            label12.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label12.ForeColor = Color.FromArgb(81, 106, 130);
-            label12.Location = new Point(596, 163);
-            label12.Name = "label12";
-            label12.Size = new Size(192, 60);
-            label12.TabIndex = 81;
-            label12.Text = "1. Select the software you want to install from the categories above.";
+            buttonUpdateAll.BackColor = Color.CornflowerBlue;
+            buttonUpdateAll.FlatStyle = FlatStyle.Popup;
+            buttonUpdateAll.Location = new Point(693, 443);
+            buttonUpdateAll.Name = "buttonUpdateAll";
+            buttonUpdateAll.Size = new Size(95, 27);
+            buttonUpdateAll.TabIndex = 85;
+            buttonUpdateAll.Text = "Update All";
+            buttonUpdateAll.UseVisualStyleBackColor = false;
+            buttonUpdateAll.Click += buttonUpdateAll_Click;
             // 
-            // label13
+            // buttonSendRequest
             // 
-            label13.AllowDrop = true;
-            label13.FlatStyle = FlatStyle.Popup;
-            label13.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label13.ForeColor = Color.FromArgb(81, 106, 130);
-            label13.Location = new Point(596, 229);
-            label13.Name = "label13";
-            label13.Size = new Size(192, 42);
-            label13.TabIndex = 82;
-            label13.Text = "2. Double-check your choices.";
+            buttonSendRequest.BackColor = Color.CornflowerBlue;
+            buttonSendRequest.FlatStyle = FlatStyle.Popup;
+            buttonSendRequest.Location = new Point(643, 473);
+            buttonSendRequest.Name = "buttonSendRequest";
+            buttonSendRequest.Size = new Size(95, 27);
+            buttonSendRequest.TabIndex = 86;
+            buttonSendRequest.Text = "Send Request";
+            buttonSendRequest.UseVisualStyleBackColor = false;
+            buttonSendRequest.Click += buttonSendRequest_Click;
             // 
-            // label14
+            // richTextBox1
             // 
-            label14.AllowDrop = true;
-            label14.FlatStyle = FlatStyle.Popup;
-            label14.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label14.ForeColor = Color.FromArgb(81, 106, 130);
-            label14.Location = new Point(596, 277);
-            label14.Name = "label14";
-            label14.Size = new Size(192, 71);
-            label14.TabIndex = 83;
-            label14.Text = "3. Click the \"Install\" button to launch the automated process.";
-            // 
-            // label15
-            // 
-            label15.AllowDrop = true;
-            label15.FlatStyle = FlatStyle.Popup;
-            label15.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label15.ForeColor = Color.FromArgb(81, 106, 130);
-            label15.Location = new Point(596, 348);
-            label15.Name = "label15";
-            label15.Size = new Size(192, 74);
-            label15.TabIndex = 84;
-            label15.Text = "4. PowerShell will install everything silently in the background";
+            richTextBox1.BackColor = Color.FromArgb(5, 11, 22);
+            richTextBox1.BorderStyle = BorderStyle.None;
+            richTextBox1.Font = new Font("Segoe UI", 11.25F);
+            richTextBox1.ForeColor = Color.FromArgb(81, 106, 130);
+            richTextBox1.Location = new Point(596, 164);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.ScrollBars = RichTextBoxScrollBars.None;
+            richTextBox1.Size = new Size(196, 246);
+            richTextBox1.TabIndex = 89;
+            richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
             // Form1
             // 
@@ -1118,18 +1105,16 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(5, 11, 22);
             ClientSize = new Size(800, 542);
+            Controls.Add(buttonSendRequest);
+            Controls.Add(buttonUpdateAll);
             Controls.Add(checkBoxDiscord);
-            Controls.Add(label15);
             Controls.Add(pictureBox4);
-            Controls.Add(label14);
             Controls.Add(checkBoxSpotify);
-            Controls.Add(label13);
             Controls.Add(checkBoxInstagram);
-            Controls.Add(label12);
             Controls.Add(pictureBox5);
             Controls.Add(label11);
             Controls.Add(pictureBox6);
-            Controls.Add(checkBoxTranslucentTB);
+            Controls.Add(checkBoxTranslucent);
             Controls.Add(label5);
             Controls.Add(checkBoxTaskbarX);
             Controls.Add(checkBoxBrave);
@@ -1140,11 +1125,11 @@
             Controls.Add(checkBoxQbittorrent);
             Controls.Add(label10);
             Controls.Add(checkBoxTor);
-            Controls.Add(checkBoxNET10ASPNET);
+            Controls.Add(checkBoxNetAsp);
             Controls.Add(pictureBox1);
             Controls.Add(pictureBox27);
             Controls.Add(pictureBox3);
-            Controls.Add(checkBoxNET10Desktop);
+            Controls.Add(checkBoxNetDesktop);
             Controls.Add(label3);
             Controls.Add(pictureBox26);
             Controls.Add(label4);
@@ -1162,9 +1147,9 @@
             Controls.Add(pictureBox23);
             Controls.Add(checkBoxGit);
             Controls.Add(pictureBox16);
-            Controls.Add(checkBoxVisualStudioCode);
+            Controls.Add(checkBoxVSCode);
             Controls.Add(pictureBox20);
-            Controls.Add(checkBoxVisualStudio);
+            Controls.Add(checkBoxVS);
             Controls.Add(checkBoxPython);
             Controls.Add(pictureBox21);
             Controls.Add(pictureBox22);
@@ -1180,7 +1165,7 @@
             Controls.Add(pictureBox12);
             Controls.Add(checkBoxLogitech);
             Controls.Add(pictureBox13);
-            Controls.Add(checkBoxNVIDIA);
+            Controls.Add(checkBoxNvidia);
             Controls.Add(checkBoxAMD);
             Controls.Add(pictureBox14);
             Controls.Add(pictureBox15);
@@ -1197,10 +1182,11 @@
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(Chromepicture);
-            Controls.Add(CheckBoxChrome);
+            Controls.Add(checkBoxChrome);
             Controls.Add(label2);
             Controls.Add(button1);
             Controls.Add(pictureBox7);
+            Controls.Add(richTextBox1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
@@ -1249,7 +1235,7 @@
         #endregion
 
         private Button button1;
-        private CheckBox CheckBoxChrome;
+        private CheckBox checkBoxChrome;
         private CheckBox checkBoxBrave;
         private CheckBox checkBoxOperaGX;
         private Label label2;
@@ -1290,7 +1276,7 @@
         private PictureBox pictureBox12;
         private CheckBox checkBoxLogitech;
         private PictureBox pictureBox13;
-        private CheckBox checkBoxNVIDIA;
+        private CheckBox checkBoxNvidia;
         private CheckBox checkBoxAMD;
         private PictureBox pictureBox14;
         private PictureBox pictureBox15;
@@ -1304,9 +1290,9 @@
         private Label label8;
         private CheckBox checkBoxGit;
         private PictureBox pictureBox16;
-        private CheckBox checkBoxVisualStudioCode;
+        private CheckBox checkBoxVSCode;
         private PictureBox pictureBox20;
-        private CheckBox checkBoxVisualStudio;
+        private CheckBox checkBoxVS;
         private CheckBox checkBoxPython;
         private PictureBox pictureBox21;
         private PictureBox pictureBox22;
@@ -1317,19 +1303,18 @@
         private CheckBox checkBoxGitHub;
         private PictureBox pictureBox24;
         private Label label9;
-        private CheckBox checkBoxNET10Desktop;
+        private CheckBox checkBoxNetDesktop;
         private PictureBox pictureBox26;
-        private CheckBox checkBoxNET10ASPNET;
+        private CheckBox checkBoxNetAsp;
         private PictureBox pictureBox27;
         private Label label10;
-        private CheckBox checkBoxTranslucentTB;
+        private CheckBox checkBoxTranslucent;
         private CheckBox checkBoxTaskbarX;
         private PictureBox pictureBox28;
         private PictureBox pictureBox29;
         private Label label11;
-        private Label label12;
-        private Label label13;
-        private Label label14;
-        private Label label15;
+        private Button buttonUpdateAll;
+        private Button buttonSendRequest;
+        private RichTextBox richTextBox1;
     }
 }

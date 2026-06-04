@@ -35,20 +35,22 @@
             // 
             // textBox1
             // 
+            textBox1.BackColor = Color.FromArgb(5, 11, 22);
+            textBox1.ForeColor = Color.FromArgb(81, 106, 130);
             textBox1.Location = new Point(12, 12);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
             textBox1.ScrollBars = ScrollBars.Vertical;
             textBox1.Size = new Size(592, 188);
-            textBox1.TabIndex = 0;
+            textBox1.TabIndex = 1;
             // 
             // btnAccept
             // 
             btnAccept.Location = new Point(12, 206);
             btnAccept.Name = "btnAccept";
             btnAccept.Size = new Size(75, 23);
-            btnAccept.TabIndex = 1;
+            btnAccept.TabIndex = 0;
             btnAccept.Text = "Accept";
             btnAccept.UseVisualStyleBackColor = true;
             btnAccept.Click += btnAccept_Click;
@@ -67,6 +69,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(5, 11, 22);
             ClientSize = new Size(616, 241);
             Controls.Add(btnReject);
             Controls.Add(btnAccept);

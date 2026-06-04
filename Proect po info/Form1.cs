@@ -2,9 +2,14 @@ using Microsoft.CSharp;
 using System.CodeDom.Compiler;
 using System.Diagnostics;
 using System.Text;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
+using System.Net.Http;
+using System.Text;
+using System.Net.NetworkInformation;
 
 namespace Proect_po_info
 {
+
     public partial class Form1 : Form
     {
         private bool dragging = false;
@@ -12,151 +17,88 @@ namespace Proect_po_info
         public Form1()
         {
             InitializeComponent();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             List<string> wingetCommands = new List<string>();
 
-            if (CheckBoxChrome.Checked)
+            var applications = new[]
             {
-                wingetCommands.Add("Write-Host 'Инсталиране на Google Chrome...' -ForegroundColor Green; winget install --id Google.Chrome --silent --accept-source-agreements --accept-package-agreements");
+                // === BROWSERS ===
+                new { Box = checkBoxChrome,      Name = "Google Chrome",   Id = "Google.Chrome" },
+                new { Box = checkBoxBrave,       Name = "Brave Browser",   Id = "Brave.Brave" },
+                new { Box = checkBoxOperaGX,     Name = "Opera GX",        Id = "Opera.OperaGX" },
+                new { Box = checkBoxTor,         Name = "Tor Browser",     Id = "TorProject.TorBrowser" },
 
-            }
-            if (checkBoxBrave.Checked)
-            {
-                wingetCommands.Add("Write-Host 'Инсталиране на Brave Browser...' -ForegroundColor Green; winget install --id Brave.Brave -e --silent --accept-source-agreements --accept-package-agreements");
-            }
-            if (checkBoxOperaGX.Checked)
-            {
-                wingetCommands.Add("Write-Host 'Инсталиране на Opera GX...' -ForegroundColor Green; winget install --id Opera.OperaGX -e --silent --accept-source-agreements --accept-package-agreements");
-            }
-            if (checkBoxTor.Checked)
-            {
-                wingetCommands.Add("Write-Host 'Инсталиране на Tor Browser...' -ForegroundColor Green; winget install --id TorProject.TorBrowser -e --silent --accept-source-agreements --accept-package-agreements");
-            }
-            if (checkBoxQbittorrent.Checked)
-            {
-                wingetCommands.Add("Write-Host 'Инсталиране на qBittorrent...' -ForegroundColor Green; winget install --id qBittorrent.qBittorrent -e --silent --accept-source-agreements --accept-package-agreements");
-            }
-            if (checkBoxWinRAR.Checked)
-            {
-                wingetCommands.Add("Write-Host 'Инсталиране на WinRAR...' -ForegroundColor Green; winget install --id RARLab.WinRAR -e --silent --accept-source-agreements --accept-package-agreements");
-            }
-            if (checkBox7Zip.Checked)
-            {
-                wingetCommands.Add("Write-Host 'Инсталиране на 7-Zip...' -ForegroundColor Green; winget install --id 7zip.7zip -e --silent --accept-source-agreements --accept-package-agreements");
-            }
-            if (checkBoxDiscord.Checked)
-            {
-                wingetCommands.Add("Write-Host 'Инсталиране на Discord...' -ForegroundColor Green; winget install --id Discord.Discord -e --silent --accept-source-agreements --accept-package-agreements");
-            }
-            if (checkBoxInstagram.Checked)
-            {
-                wingetCommands.Add("Write-Host 'Инсталиране на Instagram...' -ForegroundColor Green; winget install --id IG.IGClient -e --silent --accept-source-agreements --accept-package-agreements");
-            }
-            if (checkBoxSpotify.Checked)
-            {
-                wingetCommands.Add("Write-Host 'Инсталиране на Spotify...' -ForegroundColor Green; winget install --id Spotify.Spotify -e --silent --accept-source-agreements --accept-package-agreements");
-            }
-            if (checkBoxSteam.Checked)
-            {
-                wingetCommands.Add("Write-Host 'Инсталиране на Steam...' -ForegroundColor Green; winget install --id Valve.Steam -e --silent --accept-source-agreements --accept-package-agreements");
-            }
-            if (checkBoxEpicGames.Checked)
-            {
-                wingetCommands.Add("Write-Host 'Инсталиране на EpicGames...' -ForegroundColor Green; winget install --id EpicGames.EpicGamesLauncher -e --silent --accept-source-agreements --accept-package-agreements");
-            }
-            if (checkBoxUbisoft.Checked)
-            {
-                wingetCommands.Add("Write-Host 'Инсталиране на Ubisoft...' -ForegroundColor Green; winget install --id Ubisoft.Connect -e --silent --accept-source-agreements --accept-package-agreements");
-            }
-            if (checkBoxWargaming.Checked)
-            {
-                wingetCommands.Add("Write-Host 'Инсталиране на Wargaming...' -ForegroundColor Green; winget install --id Wargaming.GameCenter -e --silent --accept-source-agreements --accept-package-agreements");
-            }
-            if (checkBoxLogitech.Checked)
-            {
-                wingetCommands.Add("Write-Host 'Инсталиране на Logitech...' -ForegroundColor Green; winget install --id Logitech.GHUB -e --silent --accept-source-agreements --accept-package-agreements");
-            }
-            if (checkBoxNVIDIA.Checked)
-            {
-                wingetCommands.Add("Write-Host 'Инсталиране на NVIDIA...' -ForegroundColor Green; winget install --id Nvidia.App -e --silent --accept-source-agreements --accept-package-agreements");
-            }
-            if (checkBoxAMD.Checked)
-            {
-                wingetCommands.Add("Write-Host 'Инсталиране на AMD...' -ForegroundColor Green; winget install --id AMD.AMDSoftwareCloudEdition -e --silent --accept-source-agreements --accept-package-agreements");
-            }
-            if (checkBoxIntel.Checked)
-            {
-                wingetCommands.Add("Write-Host 'Инсталиране на Intel...' -ForegroundColor Green; winget install --id Intel.IntelDriverAndSupportAssistant -e --silent --accept-source-agreements --accept-package-agreements");
-            }
-            if (checkBoxAvast.Checked)
-            {
-                wingetCommands.Add("Write-Host 'Инсталиране на Avast...' -ForegroundColor Green; winget install --id Avast.AvastAntivirus -e --silent --accept-source-agreements --accept-package-agreements");
-            }
-            if (checkBoxNordVPN.Checked)
-            {
-                wingetCommands.Add("Write-Host 'Инсталиране на NordVPN...' -ForegroundColor Green; winget install --id NordVPN.NordVPN -e --silent --accept-source-agreements --accept-package-agreements");
-            }
-            if (checkBoxVisualStudioCode.Checked)
-            {
-                wingetCommands.Add("Write-Host 'Инсталиране на VisualStudioCode...' -ForegroundColor Green; winget install --id Microsoft.VisualStudioCode -e --silent --accept-source-agreements --accept-package-agreements");
-            }
-            if (checkBoxVisualStudio.Checked)
-            {
-                wingetCommands.Add("Write-Host 'Инсталиране на VisualStudio...' -ForegroundColor Green; winget install --id Microsoft.VisualStudio.Community -e --silent --accept-source-agreements --accept-package-agreements");
-            }
-            if (checkBoxPython.Checked)
-            {
-                wingetCommands.Add("Write-Host 'Инсталиране на Python...' -ForegroundColor Green; winget install --id Python.Python.3.13 -e --silent --accept-source-agreements --accept-package-agreements");
-            }
-            if (checkBoxGit.Checked)
-            {
-                wingetCommands.Add("Write-Host 'Инсталиране на Git...' -ForegroundColor Green; winget install --id Git.Git -e --silent --accept-source-agreements --accept-package-agreements");
-            }
-            if (checkBoxGitHub.Checked)
-            {
-                wingetCommands.Add("Write-Host 'Инсталиране на GitHub...' -ForegroundColor Green; winget install --id GitHub.GitHubDesktop -e --silent --accept-source-agreements --accept-package-agreements");
-            }
-            if (checkBoxJava.Checked)
-            {
-                wingetCommands.Add("Write-Host 'Инсталиране на Java...' -ForegroundColor Green; winget install --id Oracle.JavaRuntimeEnvironment -e --silent --accept-source-agreements --accept-package-agreements");
-            }
-            if (checkBoxNotepad.Checked)
-            {
-                wingetCommands.Add("Write-Host 'Инсталиране на Notepad...' -ForegroundColor Green; winget install --id Notepad++.Notepad++ -e --silent --accept-source-agreements --accept-package-agreements");
-            }
-            if (checkBoxNET10Desktop.Checked)
-            {
-                wingetCommands.Add("Write-Host 'Инсталиране на NET10Desktop...' -ForegroundColor Green; winget install --id Microsoft.DotNet.DesktopRuntime.10 -e --silent --accept-source-agreements --accept-package-agreements");
-            }
-            if (checkBoxNET10ASPNET.Checked)
-            {
-                wingetCommands.Add("Write-Host 'Инсталиране на .NET 10.0 ASP.NET...' -ForegroundColor Green; winget install --id Microsoft.DotNet.AspNetCore.10 -e --silent --accept-source-agreements --accept-package-agreements");
-            }
-            if (checkBoxTranslucentTB.Checked)
-            {
-                wingetCommands.Add("Write-Host 'Инсталиране на TranslucentTB...' -ForegroundColor Green; winget install --id CharlesMilette.TranslucentTB -e --silent --accept-source-agreements --accept-package-agreements");
-            }
-            if (checkBoxTaskbarX.Checked)
-            {
-                wingetCommands.Add("Write-Host 'Инсталиране на TaskbarX...' -ForegroundColor Green; winget install --id chanplecai.smarttaskbar -e --silent --accept-source-agreements --accept-package-agreements");
-            }
+                // === FILE SHARING & COMPRESSION ===
+                new { Box = checkBoxQbittorrent, Name = "qBittorrent",     Id = "qbittorrent.qBittorrent" },
+                new { Box = checkBoxWinRAR,      Name = "WinRAR",          Id = "RARLab.WinRAR" },
+                new { Box = checkBox7Zip,        Name = "7-Zip",           Id = "7zip.7zip" },
 
-            if (wingetCommands.Count == 0)
+                // === MEDIA ===
+                new { Box = checkBoxDiscord,     Name = "Discord",         Id = "Discord.Discord" },
+                new { Box = checkBoxSpotify,     Name = "Spotify",         Id = "Spotify.Spotify" },
+                new { Box = checkBoxInstagram,   Name = "Instagram",       Id = "Facebook.Instagram" },
+
+                // === PLATFORMS ===
+                new { Box = checkBoxSteam,       Name = "Steam",           Id = "Value.Steam" },
+                new { Box = checkBoxEpicGames,   Name = "Epic Games",      Id = "EpicGames.EpicGamesLauncher" },
+                new { Box = checkBoxUbisoft,     Name = "Ubisoft",         Id = "Ubisoft.Connect" },
+                new { Box = checkBoxWargaming,   Name = "Wargaming",       Id = "Wargaming.GameCenter" },
+
+                // === DRIVERS ===
+                new { Box = checkBoxLogitech,    Name = "Logitech G HUB",  Id = "Logitech.GHUB" },
+                new { Box = checkBoxNvidia,      Name = "NVIDIA Software", Id = "Nvidia.GeForceExperience" },
+                new { Box = checkBoxAMD,         Name = "AMD Software",    Id = "AMD.RyzenMaster" },
+                new { Box = checkBoxIntel,       Name = "Intel Driver",    Id = "Intel.IntelDriverAndSupportAssistant" },
+
+                // === SECURITY ===
+                new { Box = checkBoxAvast,       Name = "Avast Antivirus", Id = "Avast.AvastAntivirus" },
+                new { Box = checkBoxNordVPN,     Name = "NordVPN",         Id = "NordSecurity.NordVPN" },
+                new { Box = checkBoxProtonVPN,   Name = "Proton VPN",      Id = "Proton.ProtonVPN" },
+
+                // === DEVELOPER TOOLS ===
+                new { Box = checkBoxVSCode,      Name = "VS Code",         Id = "Microsoft.VisualStudioCode" },
+                new { Box = checkBoxVS,          Name = "Visual Studio",   Id = "Microsoft.VisualStudio.2022.Community" },
+                new { Box = checkBoxPython,      Name = "Python",          Id = "Python.Python.3" },
+                new { Box = checkBoxGit,         Name = "Git",             Id = "Git.Git" },
+                new { Box = checkBoxGitHub,      Name = "GitHub Desktop",  Id = "GitHub.GitHubDesktop" },
+                new { Box = checkBoxJava,        Name = "Java",            Id = "Oracle.JDK" },
+                new { Box = checkBoxNotepad,     Name = "Notepad++",       Id = "NotepadPlusPlus.NotepadPlusPlus" },
+                new { Box = checkBoxNetDesktop,  Name = ".NET Runtime",    Id = "Microsoft.DotNet.DesktopRuntime.9" },
+                new { Box = checkBoxNetAsp,      Name = "ASP.NET Core",    Id = "Microsoft.DotNet.AspNetCore.9" },
+
+                // === DESKTOP VISUAL ===
+                new { Box = checkBoxTranslucent, Name = "TranslucentTB",   Id = "TranslucentTB.TranslucentTB" },
+                new { Box = checkBoxTaskbarX,    Name = "TaskbarX",        Id = "ChrisAndriessen.TaskbarX" }
+
+            };
+
+            if (!IsInternetAvailable())
             {
-                MessageBox.Show("Моля, изберете поне една програма за инсталиране!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CustomMessageBox.Show("No internet connection! Please connect to the network to use WinGet.", "Error");
                 return;
             }
 
+            foreach (var app in applications)
+            {
+                if (app.Box != null && app.Box.Checked)
+                {
+                    string command = $"Write-Host 'Installing the {app.Name}...' -ForegroundColor Green; " +
+                                     $"winget install --id {app.Id} --silent --accept-source-agreements --accept-package-agreements --disable-interactivity";
+
+                    wingetCommands.Add(command);
+                }
+            }
 
             StringBuilder psScript = new StringBuilder();
             psScript.Append("Clear-Host; ");
             psScript.Append("Write-Host '==========================================' -ForegroundColor Green; ");
-            psScript.Append("Write-Host '  Vstaller - Автоматична инсталация       ' -ForegroundColor Green; ");
+            psScript.Append("Write-Host '  Vstaller - Automatic installation       ' -ForegroundColor Green; ");
             psScript.Append("Write-Host '==========================================' -ForegroundColor Green; ");
-            psScript.Append("Write-Host 'Моля, изчакайте, софтуерът се инсталира...' -ForegroundColor Yellow; ");
+            psScript.Append("Write-Host 'Please wait, the software is installing...' -ForegroundColor Yellow; ");
             psScript.Append("Write-Host ''; ");
 
             foreach (string cmd in wingetCommands)
@@ -166,14 +108,17 @@ namespace Proect_po_info
 
             psScript.Append("Write-Host ''; ");
             psScript.Append("Write-Host '==========================================' -ForegroundColor Green; ");
-            psScript.Append("Write-Host 'Всички избрани програми са инсталирани успешно!' -ForegroundColor Green; ");
+            psScript.Append("Write-Host 'All selected programs have been installed successfully!' -ForegroundColor Green; ");
             psScript.Append("Write-Host '==========================================' -ForegroundColor Green; ");
+
+            psScript.Append("Write-Host 'All installations are complete! Press ENTER to exit...' -ForegroundColor Cyan; ");
+            psScript.Append("Read-Host; ");
 
             try
             {
                 ProcessStartInfo psi = new ProcessStartInfo();
                 psi.FileName = "powershell.exe";
-                psi.Arguments = $"-NoExit -Command \"{psScript.ToString()}\"";
+                psi.Arguments = $"-Command \"{psScript.ToString()}\"";
                 psi.CreateNoWindow = false;
                 psi.UseShellExecute = true;
 
@@ -181,21 +126,71 @@ namespace Proect_po_info
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Възникна грешка при стартиране на инсталацията: {ex.Message}", "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                CustomMessageBox.Show($"An error occurred while starting the installation: {ex.Message}", "Error");
+            }
+
+        }
+        private void buttonUpdateAll_Click(object sender, EventArgs e)
+        {
+            StringBuilder psScript = new StringBuilder();
+            psScript.Append("Clear-Host; ");
+            psScript.Append("Write-Host '==========================================' -ForegroundColor Cyan; ");
+            psScript.Append("Write-Host '   Vstaller - Full software update ' -ForegroundColor Cyan; ");
+            psScript.Append("Write-Host '==========================================' -ForegroundColor Cyan; ");
+            psScript.Append("Write-Host 'Checking for outdated programs and updating...' -ForegroundColor Yellow; ");
+            psScript.Append("Write-Host ''; ");
+
+            psScript.Append("winget upgrade --all --silent --accept-source-agreements --accept-package-agreements --disable-interactivity; ");
+
+            psScript.Append("Write-Host ''; ");
+            psScript.Append("Write-Host '==========================================' -ForegroundColor Cyan; ");
+            psScript.Append("Write-Host 'All available programs were updated successfully!' -ForegroundColor Cyan; ");
+            psScript.Append("Write-Host '==========================================' -ForegroundColor Cyan; ");
+            psScript.Append("Write-Host ''; ");
+            psScript.Append("Write-Host 'Press ENTER to exit...' -ForegroundColor Yellow; ");
+            psScript.Append("Read-Host; ");
+
+            try
+            {
+                ProcessStartInfo psi = new ProcessStartInfo();
+                psi.FileName = "powershell.exe";
+                psi.Arguments = $"-Command \"{psScript.ToString()}\"";
+                psi.CreateNoWindow = false;
+                psi.UseShellExecute = true;
+
+                Process.Start(psi);
+            }
+            catch (Exception ex)
+            {
+                CustomMessageBox.Show($"An error occurred while starting the update: {ex.Message}", "Error");
             }
         }
 
-        private void CheckBoxChrome_CheckedChanged(object sender, EventArgs e)
+        private void buttonSendRequest_Click(object sender, EventArgs e)
         {
-
-        }
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
-        {
-
+            using (Send_Requests requestForm = new Send_Requests())
+            {
+                requestForm.StartPosition = FormStartPosition.CenterParent;
+                requestForm.ShowDialog();
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            richTextBox1.Text = "1. Select the software you want to install from the categories." +
+                "\r\n2. Double-check your choices." +
+                "\r\n3. \"Install\" button  will install everything that you have chose." +
+                "\r\n4. \"Update All\" Button will update EVERYSYSTEM that suport winget on you'rs device.";
+            string tW = "EVERYSYSTEM";
+            int startIndex = richTextBox1.Text.IndexOf(tW);
+
+            if (startIndex != -1)
+            {
+                richTextBox1.Select(startIndex, tW.Length);
+                richTextBox1.SelectionColor = Color.FromArgb(0, 184, 255);
+                richTextBox1.SelectionLength = 0;
+            }
+
             this.Opacity = 0;
             using (TermsForm terms = new TermsForm())
             {
@@ -214,6 +209,7 @@ namespace Proect_po_info
         {
             Application.Exit();
         }
+
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -264,5 +260,26 @@ namespace Proect_po_info
         {
 
         }
+
+        private bool IsInternetAvailable()
+        {
+            try
+            {
+                using (Ping myPing = new Ping())
+                {
+                    String host = "8.8.8.8";
+                    byte[] buffer = new byte[32];
+                    int timeout = 2000; // Чака 2 секунди за отговор
+                    PingOptions pingOptions = new PingOptions();
+                    PingReply reply = myPing.Send(host, timeout, buffer, pingOptions);
+                    return (reply.Status == IPStatus.Success);
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
     }
 }
